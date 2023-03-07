@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(73, 68, 68);
+    margin: 0;
+    padding: 0;   
+    font-family: sans-serif;
+}
+#loginBox{
+    background-color: rgb(235, 212, 189);
+    height: 320px;
+    width: 350px;    
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    
+}
+
+#loginImg{
+    width: 100px;
+    margin-left: 35%;
+}
+    
