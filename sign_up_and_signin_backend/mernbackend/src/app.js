@@ -1,9 +1,12 @@
 const User = require("./Models/User");
 const express=require("express");
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 const app=express();
 const path=require("path");
 const hbs=require("hbs");
+
+const bcryptSalt = bcrypt.genSaltSync(10);
 
 const port=process.env.PORT || 4000;
 mongoose.connect('mongodb+srv://gfg:RVcRPUpDzwATJ07J@cluster0.efzinbl.mongodb.net/?retryWrites=true&w=majority');
@@ -47,8 +50,8 @@ app.post("/register",async (req,res)=>{
                 phone:  req.body.phone,
                 gender: req.body.gender,
                 age:    req.body.age,
-                password:   req.body.password,
-                confirmpassword:   req.body.confirmpassword
+                password:   bcrypt.hashSync(req.body.password, bcryptSalt),
+                confirmpassword:   bcrypt.hashSync(req.body.password, bcryptSalt),
             });
 
             const registered= await registeruser.save();
@@ -71,9 +74,10 @@ app.post("/login",async (req,res)=>{
 
         // console.log(`${email} and password is ${password}`);
 
-        const useremail=await Register.findOne({email:email});
+        const userFound=await Register.findOne({email:email});
+        const passOk = bcrypt.compareSync(password, userFound.password);
         
-        if(useremail.password === password){
+        if(passOk){
             res.status(201).render("register");
         }else{
             res.send("invalid login details");
@@ -86,5 +90,5 @@ app.post("/login",async (req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log('Running on port ${port}');
+    console.log(`it is running in ${port}`);
 });
