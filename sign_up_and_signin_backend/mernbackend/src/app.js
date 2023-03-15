@@ -1,11 +1,12 @@
+const User = require("./Models/User");
 const express=require("express");
+const mongoose = require("mongoose");
 const app=express();
 const path=require("path");
 const hbs=require("hbs");
 
-require("./db/connection");
-const Register=require("./models/registers");
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 4000;
+mongoose.connect('mongodb+srv://gfg:RVcRPUpDzwATJ07J@cluster0.efzinbl.mongodb.net/?retryWrites=true&w=majority');
 
 const static_path=path.join(__dirname,"../public");
 const template_path=path.join(__dirname,"../templates/views");
@@ -40,21 +41,21 @@ app.post("/register",async (req,res)=>{
         const cpassword=req.body.confirmpassword;
         if(password === cpassword){
 
-            const registeruser=new Register({
+            const registeruser=new User({
                 name: req.body.name,
                 email:req.body.email,
-                phone:req.body.phone,
-                gender:req.body.gender,
-                age:req.body.age,
-                password:req.body.password,
-                confirmpassword:req.body.confirmpassword
+                phone:  req.body.phone,
+                gender: req.body.gender,
+                age:    req.body.age,
+                password:   req.body.password,
+                confirmpassword:   req.body.confirmpassword
             });
 
             const registered= await registeruser.save();
-            res.status(201).render("register");
+            res.status(201).json(registered);
 
         }else{
-            res.send("passwords are not matching");
+            res.json("passwords are not matching");
         }
 
 
@@ -85,5 +86,5 @@ app.post("/login",async (req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log(`it is running in ${port}`);
+    console.log('Running on port ${port}');
 });
