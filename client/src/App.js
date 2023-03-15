@@ -2,12 +2,21 @@ import './App.css';
 import HomeBody from './HeaderBody';
 import Header from './Header';
 
+import LoginPage from './LoginPage';
+
 function App() {
   return (
-    <div className="">
+    <>
+     
+    <LoginPage/>
+      {/* <div className="">
       <Header />
-      <HomeBody />
-    </div>
+      <HomeBody />       
+        
+      </div>   */}
+      
+    </>
+    
   );
 }
 
