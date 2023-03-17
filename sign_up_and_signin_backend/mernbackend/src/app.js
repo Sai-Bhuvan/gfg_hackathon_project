@@ -4,7 +4,8 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const app=express();
 const path=require("path");
-const hbs=require("hbs");
+// const hbs=require("hbs");
+const cors = require("cors");
 
 const bcryptSalt = bcrypt.genSaltSync(10);
 
@@ -15,13 +16,14 @@ const static_path=path.join(__dirname,"../public");
 const template_path=path.join(__dirname,"../templates/views");
 const partials_path=path.join(__dirname,"../templates/partials");
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(static_path));
-app.set("view engine","hbs");
+// app.set("view engine","hbs");
 app.set("views",template_path);
-hbs.registerPartials(partials_path);
+// hbs.registerPartials(partials_path);
 
 app.get("/",(req,res)=>{
     res.render("register");
@@ -35,15 +37,10 @@ app.get("/login",(req,res)=>{
     res.render("login");
 });
 
-app.post("/register",async (req,res)=>{
+app.post("/sign-up",async (req,res)=>{
     try{
 
-        // console.log(req.body.name);
-        // res.send(req.body.name);
-        const password=req.body.password;
-        const cpassword=req.body.confirmpassword;
-        if(password === cpassword){
-
+        console.log(req.body.name);
             const registeruser=new User({
                 name: req.body.name,
                 email:req.body.email,
@@ -56,12 +53,6 @@ app.post("/register",async (req,res)=>{
 
             const registered= await registeruser.save();
             res.status(201).json(registered);
-
-        }else{
-            res.json("passwords are not matching");
-        }
-
-
     }catch(error){
         res.status(400).send(error);
     }
@@ -72,20 +63,27 @@ app.post("/login",async (req,res)=>{
         const email=req.body.email;
         const password=req.body.password;
 
-        // console.log(`${email} and password is ${password}`);
+//         console.log(`${email} and password is ${password}`);
 
-        const userFound=await Register.findOne({email:email});
+        const userFound=await User.findOne({email:email});
         const passOk = bcrypt.compareSync(password, userFound.password);
+        console.log(passOk);
         
-        if(passOk){
-            res.status(201).render("register");
-        }else{
-            res.send("invalid login details");
+        if (userFound) {
+            if(passOk){
+                res.status(201).json(userFound);
+            }else{
+                res.send("Invalid password!");
+            }
+        }
+        else{
+            res.json("User not found!")
         }
         
 
     }catch(error){
-        res.status(400).send("invalid email");
+        console.log(error);
+        res.status(400).send("Some problem occured!");
     }
 })
 
