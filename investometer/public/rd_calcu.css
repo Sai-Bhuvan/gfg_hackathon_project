@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    background-color: gainsboro;
+}
+
+div{
+    display: flex;
+    margin: 0;
+    padding: 12px 6px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+input{
+    padding: 12px;
+    border-radius: 10px;
+}
+
+input:hover{
+    transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+p{
+    color: rgb(32, 26, 26);
+}
+
+button{
+    cursor: pointer;
+}
