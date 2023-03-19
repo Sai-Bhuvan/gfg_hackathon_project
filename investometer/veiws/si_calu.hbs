@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple intrest</title>
+    <link rel="stylesheet" href="/public/si_calcu.css">
+</head>
+<body>
+    <h1>
+        Investometer
+        <br>
+    </h1>
+    <h1>
+        Simple intrest calculater
+        <br>
+    </h1>
+
+    <div>
+        <label for="principal">Principal Amount</label>
+        <br>
+        
+        <input type="number" name="principal">
+    </div>
+    <div>   
+        <label for="rof">Rate of Interest</label><br>
+        
+        <input type="number" name="rof">
+    </div>
+    <div>   
+        <label for="period">Time period in years</label><br>
+        
+        <input type="number" name="poy">
+    </div>
+    <div>
+        <button onclick="calculate()">calculate </button><br>
+    </div>
+    
+    <p class="result"></p>
+</body>
+<script>
+    function calculate() {
+        var principal = document.getElementById("principal").value;
+        var rate = document.getElementById("rof").value;
+        var time = document.getElementById("poy").value;
+        var interest = (principal * rate * time) / 100;
+        var result = "Interest = " + interest;
+        document.getElementById("result").innerHTML = result;
+      }
+</script>
+</html>

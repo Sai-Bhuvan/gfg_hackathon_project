@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap');
+.dash{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height:30vh;
+    border-style: solid;
+    border-color: #E38B29;
+    border-width: 2px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1.5%;
+    background-color: rgb(254, 241, 222);
+}
+h1{
+    font-size:2rem !important;
+    font-family: 'Poppins', sans-serif !important
+}
+h3{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+body{
+    background-color: #FDEEDC;
+}
+main{
+    background-color: #FDEEDC;
+    margin-top:5%;
+}
+
+.btn-expense{
+    width:200px;
+}
+
+.card{
+    width:400px;
+    height:330px;
+}
+
+.outer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.quick-menu{
+    flex-grow:1;
+    margin-left:5%;
+}
+
+.quick-div{
+    height:150px;
+}
+
+.quick-div a{
+    text-align: center;
+}
+
+.qspan{
+    top: 30%;
+}
+
+@media (max-width:800px){
+    .outer{
+        flex-direction: column;
+    }
+    .quick-menu{
+        margin-left:0;
+    }
+    .card{
+        margin-bottom: 5%;
+    }
+}
+
+
