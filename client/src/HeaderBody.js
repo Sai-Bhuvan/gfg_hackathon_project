@@ -24,7 +24,7 @@ export default function HomeBody() {
                 <button className={photo === "./images/download.png"? onClickClassNames: "text-xl text-gray-600"} onClick={()=>handleClick("download.png")}>EEEEEEEEEE</button>
             </div>
             <div className="mx-auto items-center mt-8"> 
-                <img src={require(""+photo)} className="h-64 w-1/2 h-1/ rounded-2xl mx-auto" alt="photo"/>
+                <img src={require(""+photo)} className="h-64 w-1/2 h-1/ rounded-2xl mx-auto" alt="" />
             </div>
         </>
         

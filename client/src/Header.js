@@ -21,7 +21,7 @@ export default function Header() {
         <p className="self-center text-3xl whitespace-nowrap dark:text-black font-extrabold font-serif" >BudgetX</p>
     </a>
     <div className="flex items-center lg:order-2">
-        <Link to={"/login"} style={{marginRight:'10px'}}>{profileButton}</Link>
+        <Link to={"/loginPage"} style={{marginRight:'10px'}}>{profileButton}</Link>
         <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
           <span className="sr-only">Open user menu</span>
           <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 ">
