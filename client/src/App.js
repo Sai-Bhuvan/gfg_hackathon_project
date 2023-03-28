@@ -10,14 +10,14 @@ import AddExpense from './ExpensePage/AddExpense';
 function App() {
   return (
     <>
-    <Header />
+    {/* <Header />
     <Routes>
        <Route path = '/' element = { <HomeBody/>}/> 
       <Route path='signupPage' element = {<SignupPage/>}/>
       <Route path='loginPage' element = {<LoginPage/>}/> 
       
-    </Routes>
-    {/* <ExpensePage/> */}
+    </Routes> */}
+    <ExpensePage/>
       
     </>
     
