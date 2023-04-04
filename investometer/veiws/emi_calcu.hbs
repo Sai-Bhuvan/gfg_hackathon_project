@@ -4,44 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMI </title>
-    <link rel="stylesheet" href="/public/emi.css">
+    <title>EMI</title>
+    <link rel="stylesheet" href="..\public\emi.css">
 </head>
-<body>
-    <h1>
-        Investometer
-        <br>
-    </h1>
-    <h1>
-        EMI calculater
-        <br>
-    </h1>
 
+<body>
+    <div class="wrap">
+        <div class="outer-left">
+            <div class="inner">
+    <h1 style="margin-top:10%;">Investometer</h1>
+    <hr>
+    <h2>EMI calculator</h2>
+    <div class="Wrapper">
+        <div class="Input">
+          <input name="loan" type="number" id="input" class="Input-text" placeholder="Loan amount">
+          <label for="loan" class="Input-label">Loan amount</label>
+        </div>
+      </div>
+      <div class="Wrapper">
+        <div class="Input">
+          <input name="rof" type="number" id="input" class="Input-text" placeholder="Interest Rate">
+          <label for="rof" class="Input-label">Interest Rate</label>
+        </div>
+      </div>
+      <div class="Wrapper">
+        <div class="Input" style="margin-bottom: 5%;">
+          <input name="poy" type="number" id="input" class="Input-text" placeholder="Tenure in months">
+          <label for="poy" class="Input-label">Tenure in months</label>
+        </div>
+      </div>
     <div>
-        <label for="loan">Loan Amount</label>
-        <br>
-        
-        <input type="number" name="loan">
-    </div>
-    <div>   
-        <label for="rof">Rate of Interest</label><br>
-        
-        <input type="number" name="rof">
-    </div>
-    <div>   
-        <label for="period">Tenure in months</label><br>
-        
-        <input type="number" name="poy">
-    </div>
-    <div>
-        <button onclick="calculate()">calculate </button><br>
-    </div>
-    
+        <button class="calc" onclick="calculate()">Calculate</button><br>        
+    </div>    
     <p class="result"></p>
+    </div>
+    </div>
+    <div class="outer-right"></div>
+    </div>  
 </body>
 
-<script>
-    
+<script>    
     function calculate() {
         var principal = document.getElementById("loan").value;
         var rate = document.getElementById("rof").value;
@@ -51,4 +53,5 @@
         document.getElementById("result").innerHTML = result;
     }
 </script>
+
 </html>
