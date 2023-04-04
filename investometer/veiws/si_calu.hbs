@@ -5,40 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple intrest</title>
-    <link rel="stylesheet" href="/public/si_calcu.css">
+    <link rel="stylesheet" href="..\public\si_calcu.css">
 </head>
 <body>
-    <h1>
-        Investometer
-        <br>
-    </h1>
-    <h1>
-        Simple intrest calculater
-        <br>
-    </h1>
-
+    <div class="wrap">
+        <div class="outer-left">
+            <div class="inner">
+    <h1 style="margin-top:10%;">Investometer</h1>
+    <hr>
+    <h2>Simple Interest<br>Calculator</h2>
+    <div class="Wrapper">
+        <div class="Input">
+          <input name="principal" type="number" id="input" class="Input-text" placeholder="Principal Amount">
+          <label for="principal" class="Input-label">Principal Amount</label>
+        </div>
+      </div>
+      <div class="Wrapper">
+        <div class="Input">
+          <input name="rof" type="number" id="input" class="Input-text" placeholder="Interest Rate">
+          <label for="rof" class="Input-label">Interest Rate</label>
+        </div>
+      </div>
+      <div class="Wrapper">
+        <div class="Input" style="margin-bottom: 5%;">
+          <input name="poy" type="number" id="input" class="Input-text" placeholder="Time period in years">
+          <label for="poy" class="Input-label">Time period in years</label>
+        </div>
+      </div>
     <div>
-        <label for="principal">Principal Amount</label>
-        <br>
-        
-        <input type="number" name="principal">
-    </div>
-    <div>   
-        <label for="rof">Rate of Interest</label><br>
-        
-        <input type="number" name="rof">
-    </div>
-    <div>   
-        <label for="period">Time period in years</label><br>
-        
-        <input type="number" name="poy">
-    </div>
-    <div>
-        <button onclick="calculate()">calculate </button><br>
-    </div>
-    
+        <button class="calc" onclick="calculate()">Calculate</button><br>        
+    </div>    
     <p class="result"></p>
+    </div>
+    </div>
+    <div class="outer-right"></div>
+    </div>  
 </body>
+
 <script>
     function calculate() {
         var principal = document.getElementById("principal").value;
