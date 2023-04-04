@@ -5,37 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investometer</title>
-    <link rel="stylesheet" href="investometer.css">
+    <link rel="stylesheet" href="..\public\investometer.css"/>
 </head>
 <body>
-    <h1>
-        Investometer
-        <br>
-    </h1>
-
-    <button onclick="/si">Hello</button>
-
-    {{!-- <form action="/si" method="get">
-        <div >
-            <input type="submit" class="si" name="SI" value="Simple Intrest">
+    <div class="wrap">
+        <div class="outer-left">
+        <div class="inner">
+        <h1>Investometer</h1>
+        <button class="hello">Hello!</button>
+        <form action="/si" method="get">
+            <div >
+                <input type="submit" class="si but" name="SI" value="Simple Intrest">
+            </div>
+        </form>
+        <form action="/cd" method="get">
+            <div>
+                <input type="submit" class="rd but" name="Rd" value="Reccuring Deposit">
+            </div>
+        </form>
+        <form action="/emi" method="get">
+            <div>
+                <input type="submit" class="emi but" name="emi" value="Emi Calculater">
+            </div>
+        </form>
+        <form action="/investometer" method="post">
+            <div>
+                <input type="submit" class="si but" name="SI" value="Simple Intrest">
+            </div>
+        </form>
         </div>
-    </form>
-    <form action="/cd" method="get">
-        <div>
-            <input type="submit" class="rd" name="Rd" value="Reccuring Deposit">
-        </div>
-    </form>
-    <form action="/emi" method="get">
-        <div>
-            <input type="submit" class="emi" name="emi" value="Emi Calculater">
-        </div>
-    </form>
-    <!-- <form action="/investometer" method="post">
-        <div>
-            <input type="submit" class="si" name="SI" value="Simple Intrest">
-        </div>
-    </form> --> --}}
-
+    </div>
+    <div class="outer-right"></div>
+    </div>
 </body>
 <script src="investometer.js"></script>
 </html>
