@@ -23,7 +23,7 @@ export default function AddExpense() {
          
             <div className=' bg-blue-200 p-5 rounded-xl hover:shadow-2xl'>
                 <h1 className='text-2xl'>Add Expenditure</h1> 
-                <form action="/"  className='my-2 mx-2' onSubmit={handleSubmit}>
+                <form action="/expense"  className='my-2 mx-2' onSubmit={handleSubmit} method="POST">
                     <div className='my-2'>
                         <label htmlFor="expenseType">Name: </label>
                         
