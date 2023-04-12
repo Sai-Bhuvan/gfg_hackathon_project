@@ -17,26 +17,26 @@
     <h2>EMI calculator</h2>
     <div class="Wrapper">
         <div class="Input">
-          <input name="loan" type="number" id="input" class="Input-text" placeholder="Loan amount">
+          <input name="loan" type="number" id="loan" class="Input-text" placeholder="Loan amount">
           <label for="loan" class="Input-label">Loan amount</label>
         </div>
       </div>
       <div class="Wrapper">
         <div class="Input">
-          <input name="rof" type="number" id="input" class="Input-text" placeholder="Interest Rate">
+          <input name="rof" type="number" id="rof" class="Input-text" placeholder="Interest Rate">
           <label for="rof" class="Input-label">Interest Rate</label>
         </div>
       </div>
       <div class="Wrapper">
         <div class="Input" style="margin-bottom: 5%;">
-          <input name="poy" type="number" id="input" class="Input-text" placeholder="Tenure in months">
+          <input name="poy" type="number" id="poy" class="Input-text" placeholder="Tenure in months">
           <label for="poy" class="Input-label">Tenure in months</label>
         </div>
       </div>
     <div>
         <button class="calc" onclick="calculate()">Calculate</button><br>        
     </div>    
-    <p class="result"></p>
+    <p id="result"></p>
     </div>
     </div>
     <div class="outer-right"></div>
@@ -46,11 +46,14 @@
 <script>    
     function calculate() {
         var principal = document.getElementById("loan").value;
-        var rate = document.getElementById("rof").value;
-        var time = document.getElementById("poy").value;
-        var permonth=principal* rate * (Math.pow((1+R),N )/ Math.pow((1+R),N-1));
-        var result = "EMI per Month = " + interest;
+        var R = document.getElementById("rof").value;
+        var N = document.getElementById("poy").value;
+        R=R/12/100;
+        
+        var permonth=(principal* R * (Math.pow((1+R),N ))/ (Math.pow((1+R),N-1)));
+        var result = "EMI per Month = " + permonth;
         document.getElementById("result").innerHTML = result;
+        
     }
 </script>
 
