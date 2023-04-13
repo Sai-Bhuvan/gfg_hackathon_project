@@ -118,8 +118,8 @@ Phone
             </form>
             </div>
         </div>
-        <div id="info-image">
-            <img src={require("../images/info.png")} alt = "" className='-mt-14'/>
+       <div id="info-image">
+            <img src={require("../images/pie_graph.png")} alt = "" className='border-2 border-gray-500 rounded-2xl -mt-64 h-1/2'/>
         </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
