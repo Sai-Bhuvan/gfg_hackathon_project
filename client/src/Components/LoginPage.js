@@ -88,7 +88,7 @@ Password</label>
                     </div>
                 </div>
                <div id="info-image">
-                    <img src={require("../images/bar_graph.png")} alt=" " className='border-2 border-gray-500 rounded-2xl h-3/4'/>
+                    <img src={require("../images/bar_graph.PNG")} alt=" " className='border-2 border-gray-500 rounded-2xl h-3/4'/>
                 </div>
             </div>
         </>

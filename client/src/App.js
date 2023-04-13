@@ -12,6 +12,7 @@ import AddIncome from './Components/AddIncome';
 import FintechSolutions from './Components/FintechSolution';
 import EmiCalculater from './Components/EmiCalculater';
 import CompoundIntrestCal from './Components/CompoundIntrestCal';
+import SimpleIntrestCal from './Components/SimpleInterestCal';
 
 // axios.defaults.baseURL = "http://localhost:4000";
 
@@ -31,8 +32,8 @@ function App() {
       <Route path={'/fintech-solutions'} element = {<FintechSolutions />}/>
     </Routes> */}
     {/* <EmiCalculater/> */}
-    <CompoundIntrestCal/>
-    
+    {/* <CompoundIntrestCal/> */}
+    <SimpleIntrestCal/>
     {/* <SignupPage/> */}
      
     {/* <LoginPage/> */}

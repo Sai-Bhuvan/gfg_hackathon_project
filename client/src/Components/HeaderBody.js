@@ -1,7 +1,7 @@
 import { useState } from "react";
-const expense = require("../images/add_expense.png");
-const income = require("../images/add_income.png");
-const dashboard = require("../images/dashboard.png");
+const expense = require("../images/add_expense.PNG");
+const income = require("../images/add_income.PNG");
+const dashboard = require("../images/dashboard.PNG");
 const transactions = require("../images/transactions.jpg");
 
 export default function HomeBody() {

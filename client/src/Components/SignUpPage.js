@@ -119,7 +119,7 @@ Phone
             </div>
         </div>
        <div id="info-image">
-            <img src={require("../images/pie_graph.png")} alt = "" className='border-2 border-gray-500 rounded-2xl -mt-64 h-1/2'/>
+            <img src={require("../images/pie-graph.PNG")} alt = "" className='border-2 border-gray-500 rounded-2xl -mt-64 h-1/2'/>
         </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
