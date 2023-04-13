@@ -87,8 +87,8 @@ Password</label>
                         </form>
                     </div>
                 </div>
-                <div id="info-image">
-                    <img src={require("../images/info.png")} alt=" " className='border-2 border-gray-500 rounded-2xl h-3/4'/>
+               <div id="info-image">
+                    <img src={require("../images/bar_graph.png")} alt=" " className='border-2 border-gray-500 rounded-2xl h-3/4'/>
                 </div>
             </div>
         </>

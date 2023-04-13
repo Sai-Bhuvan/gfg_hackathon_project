@@ -16,26 +16,26 @@
     <h2>Compound Interest<br>Calculator</h2>
     <div class="Wrapper">
         <div class="Input">
-          <input name="principal" type="number" id="input" class="Input-text" placeholder="Principal Amount">
+          <input name="principal" type="number" id="principal" class="Input-text" placeholder="Principal Amount">
           <label for="principal" class="Input-label">Principal Amount</label>
         </div>
       </div>
       <div class="Wrapper">
         <div class="Input">
-          <input name="rof" type="number" id="input" class="Input-text" placeholder="Interest Rate">
+          <input name="rof" type="number" id="rof" class="Input-text" placeholder="Interest Rate">
           <label for="rof" class="Input-label">Interest Rate</label>
         </div>
       </div>
       <div class="Wrapper">
         <div class="Input" style="margin-bottom: 5%;">
-          <input name="poy" type="number" id="input" class="Input-text" placeholder="Time period in years">
+          <input name="poy" type="number" id="poy" class="Input-text" placeholder="Time period in years">
           <label for="poy" class="Input-label">Time period in years</label>
         </div>
       </div>
     <div>
         <button class="calc" onclick="calculate()">Calculate</button><br>        
     </div>    
-    <p class="result"></p>
+    <p id="result"></p>
     </div>
     </div>
     <div class="outer-right"></div>
@@ -47,9 +47,10 @@
         var principal = document.getElementById("principal").value;
         var rate = document.getElementById("rof").value;
         var time = document.getElementById("poy").value;
+        var n=0.3;
         var interest = principal*Math.pow((1+(rate/n)),(n*time));
         var result = "Compound Interest = " + interest;
-        document.getElementsByClassName("result").innerHTML = result;
+        document.getElementById("result").innerHTML = result;
     }
 </script>
 </html>
