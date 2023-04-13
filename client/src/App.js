@@ -10,6 +10,8 @@ import AddExpense from './Components/AddExpense';
 import ExpenseList from './Components/ExpenseList';
 import AddIncome from './Components/AddIncome';
 import FintechSolutions from './Components/FintechSolution';
+import EmiCalculater from './Components/EmiCalculater';
+import CompoundIntrestCal from './Components/CompoundIntrestCal';
 
 // axios.defaults.baseURL = "http://localhost:4000";
 
@@ -17,7 +19,7 @@ function App() {
   const id = window.localStorage.getItem('id');
   return (
     <>
-    <Routes>
+    {/* <Routes>
       <Route path = '/' element = { <HomePage/>}/> 
       <Route path='/signup' element = {<SignUpPage/>}/>
       <Route path='/login' element = {<LoginPage/>}/>
@@ -27,8 +29,9 @@ function App() {
       <Route path={'/add/income/:id'} element = {<AddIncome />}/>
       <Route path={'/expenses/:id'} element = {<ExpenseList />}/>
       <Route path={'/fintech-solutions'} element = {<FintechSolutions />}/>
-    </Routes>
-    
+    </Routes> */}
+    {/* <EmiCalculater/> */}
+    <CompoundIntrestCal/>
     
     {/* <SignupPage/> */}
      
