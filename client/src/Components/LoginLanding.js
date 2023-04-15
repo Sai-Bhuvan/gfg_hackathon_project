@@ -73,7 +73,7 @@ export default function LoginLanding() {
       <button className="bg-gradient-to-b from-orange-300 via-orange-50-400 to-orange-600 h-20 w-40 rounded-lg font-bold text-lg text-white mt-10 hover:bg-gradient-to-t transition-all">
         <p>Savings</p>
       </button>
-      <button className="bg-gradient-to-b from-orange-300 via-orange-50-400 to-orange-600 h-20 w-40 rounded-lg font-bold text-lg text-white hover:bg-gradient-to-t transition-all">
+      <button onClick={()=>setRedirect("/investometer")} className="bg-gradient-to-b from-orange-300 via-orange-50-400 to-orange-600 h-20 w-40 rounded-lg font-bold text-lg text-white hover:bg-gradient-to-t transition-all">
         <p>Invest</p>
       </button>
       <button onClick={()=>setRedirect("/fintech-solutions")} className="bg-gradient-to-b from-orange-300 via-orange-50-400 to-orange-600 h-20 w-40 rounded-lg font-bold text-lg text-white hover:bg-gradient-to-t transition-all">
