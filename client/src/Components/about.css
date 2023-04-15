@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f0c864;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  div {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  li::before {
+    content: "\2022";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  /* .team-list li{
+    text-decoration: none;
+  } */
+
+  /* .team-link {
+        color: #0077B5;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    } */
+
+    .team-link:hover {
+        color: #090909;
+        text-decoration: none;
+    }
+
+    /* .linkedin-icon {
+        background-image: url("linkedin-logo.png");
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    } */
+
+    .team-list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .team-link {
+        color: #0077B5;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+    
+    .linkedin-icon {
+        background-image: url("linkedin-logo.png");
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
