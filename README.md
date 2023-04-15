@@ -1,5 +1,9 @@
 This is an expense tracker fintech project.
 
+Budget X
+![image](https://user-images.githubusercontent.com/107638614/232193894-93cd0267-e86f-4967-af67-e1a4387117fe.png)
+
+
  -> budgetX is a software tool designed to help users manage their finances by tracking their expenses and income. The main problem that your budget manager aims to solve is the difficulty that many people have in keeping track of their spending and saving habits. By providing a centralized platform for users to input their financial data, your budget manager can help users gain a better understanding of their financial situation and make informed decisions about how to manage their money.
 
   To achieve this goal, your budget manager utilizes MongoDB to store historical transactions for a month. This allows users to see their spending patterns over time and track their progress toward financial goals. By using a NoSQL database like MongoDB, your budget manager can handle large amounts of data efficiently and with minimal overhead.
