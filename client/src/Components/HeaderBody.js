@@ -1,8 +1,9 @@
 import { useState } from "react";
-const expense = require("../images/add_expense.PNG");
-const income = require("../images/add_income.PNG");
-const dashboard = require("../images/dashboard.PNG");
+const expense = require("../images/add_expense.png");
+const income = require("../images/add_income.png");
+const dashboard = require("../images/dashboard.png");
 const transactions = require("../images/transactions.jpg");
+const investometer = require("../images/investometer.PNG");
 
 export default function HomeBody() {
     const [photo, setPhoto] = useState(dashboard);
@@ -32,9 +33,10 @@ And if you ever need to reference a past transaction, you can easily access all 
                 <button className={photo === income? onClickClassNames: "text-xl text-gray-600"} onClick={()=>{handleClick(income); setSize("h-1/4 w-2/5")}}>Add Income</button>
                 <button className={photo === dashboard? onClickClassNames: "text-xl text-gray-600"} onClick={()=>{handleClick(dashboard); setSize("h-3/4 w-3/4")}}>Your Dashboard</button>
                 <button className={photo === transactions? onClickClassNames: "text-xl text-gray-600"} onClick={()=>{handleClick(transactions); setSize("h-3/4 w-3/4")}}>All transactions</button>
+                <button className={photo === investometer? onClickClassNames: "text-xl text-gray-600"} onClick={()=>{handleClick(investometer); setSize("h-3/4 w-3/4")}}>Investometer</button>
             </div>
             <div className="mx-auto items-center mt-8"> 
-                <img src={photo} className={"rounded-2xl mx-auto " + size} alt="photo"/>
+                <img src={photo} className={"rounded-2xl mx-auto mb-8 " + size} alt="photo"/>
             </div>
         </>
         
